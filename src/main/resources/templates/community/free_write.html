@@ -1,0 +1,41 @@
+<html layout:decorate="~{main/layout}">
+<meta charset="UTF-8">
+<title>자유게시판 글쓰기</title>
+<div layout:fragment="content" class="container my-3">
+
+	<h5 class="my-3 border-bottom pb-2">게시글 등록</h5>
+	
+	<form action="" method="post">
+		
+	
+		<!-- <div th:replace="main/form_errors :: formErrorsFragment"></div> -->
+		
+		<div class="mb-3">
+			<label for="subject" class="form-label">제목</label>
+			<input type="text" class="form-control"/>
+		</div> 
+		
+		<div class="mb-3">
+			<label for="content" class="form-label">내용</label>
+			<textarea rows="10" class="form-control"></textarea>
+		</div> 
+		
+		<input type="submit" value="저장하기" class="btn btn-primary my-2">
+	
+	
+	</form>
+
+</div>
+
+
+
+
+
+
+
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</div>
+
+</html>

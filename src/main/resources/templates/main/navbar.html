@@ -1,0 +1,114 @@
+<meta charset="UTF-8">
+
+<nav 
+class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container-fluid">
+		<a href="/" class="navbar-brand">FitHub : 피트니스 웹사이트</a>
+		<button class="navbar-toggler" type="button"
+		data-bs-toggle="collapse"
+		data-bs-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent"
+		aria-expanded="false"
+		aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
+					<a class="nav-link" sec:authorize="isAuthenticated" th:href="@{/user/logout}">로그아웃</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" th:href="@{/user/signup}">회원가입</a>
+				</li>
+			</ul>
+		</div>
+		
+	</div>
+
+</nav>
+
+<nav th:fragment="navbarFragment"  class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a  href="/">
+    <img class="navbar-brand" src="/main_banner.png" width="200" height="100">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">홈 (Home)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/fithub/workouts/main">운동 정보 (Workouts)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/fithub/diet/main">식단 관리 (Diet Management)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/fithub/gng/main">운동 장비 및 헬스장 정보 (Gear & Gyms)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/fithub/tools/main">피트니스 도구 (Fitness Tools)</a>
+        </li>
+      
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="fithub/community" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            커뮤니티
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/fithub/community/notice">공지사항</a></li>
+            <li><a class="dropdown-item" href="/fithub/community/free/">자유게시판</a></li>
+            <li><a class="dropdown-item" href="/fithub/community/oneday">오늘의 다짐</a></li>
+            <li><a class="dropdown-item" href="/fithub/community/qna">질문/답변</a></li>
+            <li><a class="dropdown-item" href="/fithub/community/qna">운동기록</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="fithub/community" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            내 운동
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/fithub/community/notice">운동기록</a></li>
+            <li><a class="dropdown-item" href="/fithub/community/free">오늘의 운동</a></li>
+            <li><a class="dropdown-item" href="/fithub/community/oneday">목표달ㅅ</a></li>
+            <li><a class="dropdown-item" href="/fithub/community/qna">질문/답변</a></li>
+            <li><a class="dropdown-item" href="/fithub/community/qna">운동기록</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="fithub/community" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            마이페이지
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/fithub/community/notice">정보수정</a></li>
+            <li><a class="dropdown-item" href="/fithub/community/free">자유게시판</a></li>
+            <li><a class="dropdown-item" href="/fithub/community/oneday">오늘의 다짐</a></li>
+            <li><a class="dropdown-item" href="/fithub/community/qna">질문/답변</a></li>
+            <li><a class="dropdown-item" href="/fithub/community/qna">운동기록</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">www.fithub.com</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>

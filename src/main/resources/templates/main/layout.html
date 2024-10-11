@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Spring Boot Board</title>
+<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+</head>
+<body style="background-color: ">
+
+<nav th:replace="main/navbar :: navbarFragment"></nav>
+
+<th:block layout:fragment="content"></th:block>
+
+
+<!--  스크립트를 회사에서는 아래쪽에 넣어둔다. 에러가 나면 멈추기 떄문에. -->
+<script th:src="@{/bootstrap.min.js}"></script>
+
+<th:block layout:fragment="deleteScript"></th:block>
+<!--  question_detail의 deleteScript를 불러옴.  -->
+
+
+
+
+
+</body>
+</html>
